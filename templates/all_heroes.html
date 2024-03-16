@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Heroes</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='quartz.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='bootstrap.min.css') }}"
+    />
+  </head>
+  <body>
     <div class="container mx-auto">
-        <h1 class="text-center">All Heroes</h1>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Quirk</th>
-              <th scope="col">Age</th>
-              <th scope="col">Created At</th>
-              <th scope="col">Updated At</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for hero in all_heroes %}
-              <tr>
-                <td>{{ hero.first_name }}</td>
-                <td>{{ hero.last_name }}</td>
-                <td>{{ hero.quirk }}</td>
-                <td>{{ hero.age }}</td>
-                <td>{{ hero.created_at }}</td>
-                <td>{{ hero.updated_at }}</td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-        <div class="d-flex justify-content-center">
-          <a href="/" class="btn btn-primary">Back To Create</a>
-        </div>
+      <h1 class="text-center">All Heroes</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Quirk</th>
+            <th scope="col">Age</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for hero in all_heroes %}
+          <tr>
+            <td>{{ hero.first_name }}</td>
+            <td>{{ hero.last_name }}</td>
+            <td>{{ hero.quirk }}</td>
+            <td>{{ hero.age }}</td>
+            <td>{{ hero.created_at }}</td>
+            <td>{{ hero.updated_at }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center">
+        <a href="/" class="btn btn-primary">Back To Create</a>
+      </div>
     </div>
-</body>
+  </body>
 </html>
