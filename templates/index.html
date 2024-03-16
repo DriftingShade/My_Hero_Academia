@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create A Hero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quartz.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-3">Hero Maker!</h1>
+        <div class="card mx-auto" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title text-center">Create A Hero!</h5>
+              <form action="/create_hero" method="post">
+                <label for="first_name" class="form-label mt-3">First Name:</label>
+                <input type="text" class="form-control" name="first_name">
+                <label for="last_name" class="form-label mt-3">Last Name:</label>
+                <input type="text" class="form-control" name="last_name">
+                <label for="quirk" class="form-label mt-3">Quirk:</label>
+                <input type="text" class="form-control" name="quirk">
+                <label for="age" class="form-label mt-3">Age:</label>
+                <input type="text" class="form-control" name="age">
+                <div class="d-flex justify-content-center">
+                  <input type="submit" class="btn btn-primary mt-3" value="Create Hero">
+                </div>
+              </form>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
